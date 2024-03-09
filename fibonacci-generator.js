@@ -6,18 +6,22 @@ function fibonacciGenerator (n) {
 
       if (n === 1) {
         fibonacci = [0];
+      } else if (n === 2) {
+        fibonacci = [0, 1];
       } else {
         fibonacci = [0, 1];
-        for (var i = 3; i <= n; i++) {
-          fibonacci.push(fibonacci[i - 3] + fibonacci[i - 2]);
+                
+        for (var i = 2; i < n; i++) {
+          fibonacci.push(fibonacci[i - 2] + fibonacci[i - 1]);
         }
       }
-
       return fibonacci;
+
+    
+
   
       //Return an array of fibonacci numbers starting from 0.
       
   //Do NOT change any of the code below 👇
   }
-  
   
